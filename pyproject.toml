@@ -9,21 +9,34 @@ dependencies = [
     "igraph>=0.11.8",
     "imageio>=2.37.0",
     "imageio-ffmpeg>=0.6.0",
+    "kaolin==0.17.0",
     "ninja>=1.11.1.3",
     "numba>=0.61.0",
+    "nvdiffrast",
     "onnxruntime>=1.21.0",
+    "opencv-python>=4.11.0.86",
     "opencv-python-headless>=4.11.0.86",
     "pillow>=11.1.0",
+    "plyfile>=1.1",
     "pymeshfix>=0.17.0",
     "pyvista>=0.44.2",
     "rembg[gpu]>=2.0.64",
     "scipy>=1.15.2",
+    "setuptools>=76.0.0",
+    "spconv>=2.3.8",
     "torch>=2.5.1",
+    "torchvision>=0.20.1",
     "tqdm>=4.67.1",
     "transformers>=4.49.0",
     "trimesh>=4.6.4",
+    "utils3d>=0.1.0",
     "xatlas>=0.0.9",
+    "xformers>=0.0.29.post1",
 ]
+
+
+[tool.uv]
+find-links = ["https://nvidia-kaolin.s3.us-east-2.amazonaws.com/torch-2.5.1_cu121.html"]
 
 
 [tool.uv.sources]
@@ -33,3 +46,4 @@ torch = [
 torchvision = [
     { index = "pytorch-cu" },
 ]
+nvdiffrast = { git = "ssh://git@github.com/NVlabs/nvdiffrast.git" }
